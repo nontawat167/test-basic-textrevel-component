@@ -6,7 +6,7 @@ const TextReveal = ({ scroll, before, children }) => {
 
   useEffect(() => {
     const elTopPos = elRef.current.offsetTop;
-    if (scroll >= elTopPos - before || scroll == window.scrollMaxY) {
+    if (scroll >= elTopPos - before) {
       elRef.current.classList.add("reveal");
     }
   }, [scroll]);
